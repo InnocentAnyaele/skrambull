@@ -1,0 +1,187 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Jazz LET, fantasy;
+}
+
+.header-container {
+}
+
+.heading {
+    font-size: 40px;
+}
+
+.logo {
+    width: 30%;
+    height: auto;
+}
+
+.body-container {
+    display: flex;
+    /* background-color: blue; */
+    /* flex-wrap: wrap; */
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.body-header {
+    font-size: 20px;
+}
+
+.countdown-box, .scramble-box, .score-box{
+    /* background-color: yellow; */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.countdown-box:hover, .scramble-box:hover, .score-box:hover{
+    /* background-color: yellow; */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.countdown-box {
+    flex-grow: 2;
+}
+
+.scramble-box {
+    flex-grow: 6;
+    /* text-align: center; */
+    /* background-color: red; */
+}
+
+.score-box {
+    flex-grow: 2;
+}
+
+#countdown-number {
+    font-size: 20px;
+    color: blue;
+}
+
+#score-number {
+    font-size: 20px;
+    color: green;
+}
+
+#tries-number {
+    font-size: 20px;
+    color: red;
+}
+
+.logo:hover {
+    animation: shake 0.5s;
+    /* animation-iteration-count: infinite;  */
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+  .scramble-form-shake-wrong {
+    animation: shake 0.5s; 
+    border-style: solid;
+    border-color: red;
+  }
+
+  .scramble-form-shake-correct {
+    animation: shake 0.5s; 
+    border-style: solid;
+    border-color: green;
+  }
+
+  .scramble-form input {
+      width: 30px;
+      height: 30px;
+      margin: 5px;
+      text-align: center;
+      font-weight: bold;
+  }
+
+#scramble-form-container {
+    margin: 20px;
+}
+
+#scramble-button {
+    width: 120px;
+    height: 40px;
+    margin: 5px;
+}
+
+#scrambled-word {
+    letter-spacing : 2px;
+    color: black;
+    font-size: 20px;
+}
+
+#scramble-form-inputs{
+
+}
+
+#clickResult {
+    color: red;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .heading {
+        font-size: 20px;
+        color: yellow;
+    }
+
+    .body-container {
+        display: flex;
+        /* background-color: blue; */
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .body-header {
+        font-size: 15px;
+    }
+
+    .countdown-box, .scramble-box, .score-box{
+        /* background-color: yellow; */
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 100%;
+    }
+
+
+
+    #countdown-number {
+        font-size: 15px;
+        color: blue;
+    }
+
+    #score-number {
+        font-size: 15px;
+        color: green;
+    }
+
+    #tries-number {
+        font-size: 15px;
+        color: red;
+    }
+    
+  }
