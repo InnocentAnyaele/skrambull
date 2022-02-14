@@ -44,12 +44,13 @@ function countdown() {
 	if (countdownNumber < 1) {
 		var scrambleFormShake = document.getElementById('scramble-form-shake');
 		scrambleFormShake.setAttribute('class', 'scramble-form-shake-wrong');
+		initialWord = initialWord.toUpperCase();
 		setTimeout(function () {
 			scrambleFormShake.removeAttribute('class');
 		}, 2000);
 		clearTimeout(countdownTimeout);
 		alert(
-			`Your countdown has expired. Your score is ${score}. Session will now restart`,
+			`Your countdown has expired. The word is ${initialWord} Your score is ${score}. Session will now restart`,
 		);
 		window.location.reload();
 	}
