@@ -50,7 +50,7 @@ function countdown() {
 		}, 2000);
 		clearTimeout(countdownTimeout);
 		alert(
-			`Your countdown has expired. The word is ${initialWord} Your score is ${score}. Session will now restart`,
+			`Your countdown has expired. The word is ${initialWord}. Your score is ${score}. Session will now restart`,
 		);
 		window.location.reload();
 	}
