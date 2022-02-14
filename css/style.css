@@ -148,7 +148,7 @@ body{
         display: flex;
         /* background-color: blue; */
         flex-direction: column;
-        /* flex-wrap: wrap; */
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
     }
@@ -164,7 +164,7 @@ body{
         text-align: center;
         margin-left: 10px;
         margin-right: 10px;
-        width: 500px;
+        /* min-width: 400px; */
     }
 
 

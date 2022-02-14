@@ -47,6 +47,7 @@ function countdown() {
 		setTimeout(function () {
 			scrambleFormShake.removeAttribute('class');
 		}, 2000);
+		clearTimeout(countdownTimeout);
 		alert(
 			`Your countdown has expired. Your score is ${score}. Session will now restart`,
 		);
@@ -98,6 +99,8 @@ const generateInputs = () => {
 		input.setAttribute('required', '');
 		document.getElementById('scramble-form-container').appendChild(input);
 	}
+	var lineBreak = document.createElement('br');
+	document.getElementById('scramble-form-container').appendChild(lineBreak);
 	var scrambleButton = document.createElement('button');
 	var scrambleButtonText = document.createTextNode('SKRAMBULL');
 	scrambleButton.appendChild(scrambleButtonText);
