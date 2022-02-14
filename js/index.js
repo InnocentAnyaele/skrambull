@@ -41,7 +41,7 @@ const getInitialWord = () => {
 
 // this function decrements countdown by one and displays an alert when countdown has expired
 function countdown() {
-	if (countdownNumber <= 0) {
+	if (countdownNumber < 1) {
 		alert(
 			`Your countdown has expired. Your score is ${score}. Session will now restart`,
 		);
