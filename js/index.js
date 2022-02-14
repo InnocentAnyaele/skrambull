@@ -46,12 +46,12 @@ function countdown() {
 		scrambleFormShake.setAttribute('class', 'scramble-form-shake-wrong');
 		setTimeout(function () {
 			scrambleFormShake.removeAttribute('class');
+			clearTimeout(countdownTimeout);
+			alert(
+				`Your countdown has expired. Your score is ${score}. Session will now restart`,
+			);
+			window.location.reload();
 		}, 2000);
-		clearTimeout(countdownTimeout);
-		alert(
-			`Your countdown has expired. Your score is ${score}. Session will now restart`,
-		);
-		window.location.reload();
 	}
 	document.getElementById('countdown-number').innerHTML = countdownNumber;
 	countdownNumber -= 1;
