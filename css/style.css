@@ -60,8 +60,8 @@ body{
 }
 
 #countdown-number {
-    font-size: 20px;
-    color: blue;
+    font-size: 30px;
+    color: red;
 }
 
 #score-number {
@@ -170,8 +170,8 @@ body{
 
 
     #countdown-number {
-        font-size: 15px;
-        color: blue;
+        font-size: 30px;
+        color: red;
     }
 
     #score-number {

@@ -42,6 +42,11 @@ const getInitialWord = () => {
 // this function decrements countdown by one and displays an alert when countdown has expired
 function countdown() {
 	if (countdownNumber < 1) {
+		var scrambleFormShake = document.getElementById('scramble-form-shake');
+		scrambleFormShake.setAttribute('class', 'scramble-form-shake-wrong');
+		setTimeout(function () {
+			scrambleFormShake.removeAttribute('class');
+		}, 2000);
 		alert(
 			`Your countdown has expired. Your score is ${score}. Session will now restart`,
 		);
