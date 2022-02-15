@@ -7,6 +7,7 @@ var initialWord = null;
 var scrambledWord = null;
 const url = 'https://random-word-form.herokuapp.com/random/adjective';
 var countdownTimeout = null;
+var countdownModal = document.getElementById('countdown-modal');
 
 // this function runs when the page loads for the first time. And initializes the "score" and "tries" elements to 0 as well as contain a function to get random word from an api
 window.onload = function () {
@@ -52,6 +53,7 @@ function countdown() {
 		alert(
 			`Your countdown has expired. The word is ${initialWord}. Your score is ${score}. Session will now restart`,
 		);
+		// countdownModal.modal();
 		window.location.reload();
 	}
 	document.getElementById('countdown-number').innerHTML = countdownNumber;
@@ -107,6 +109,7 @@ const generateInputs = () => {
 	scrambleButton.appendChild(scrambleButtonText);
 	scrambleButton.setAttribute('type', 'submit');
 	scrambleButton.setAttribute('id', 'scramble-button');
+	scrambleButton.setAttribute('class', 'btn btn-success');
 	document
 		.getElementById('scramble-form-container')
 		.appendChild(scrambleButton);

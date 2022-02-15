@@ -97,12 +97,14 @@ body{
     animation: shake 0.5s; 
     border-style: solid;
     border-color: red;
+    border-width: thick;
   }
 
   .scramble-form-shake-correct {
     animation: shake 0.5s; 
     border-style: solid;
     border-color: green;
+    border-width: thick;
   }
 
   .scramble-form input {
@@ -167,7 +169,9 @@ body{
         /* min-width: 400px; */
     }
 
-
+.countdown-box {
+    margin-bottom: 7px;
+}
 
     #countdown-number {
         font-size: 30px;
