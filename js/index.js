@@ -28,7 +28,7 @@ const getInitialWord = () => {
 			console.log(initialWord);
 			countWord = word.length;
 			scrambledWord = shuffleInitialWord(initialWord);
-			scrambledWord = scrambledWord.toUpperCase();
+			scrambledWord = scrambledWord.toLowerCase();
 			document.getElementById('scrambled-word').innerHTML = scrambledWord;
 			generateInputs();
 			countdownTimeout = setInterval(countdown, 1000);
